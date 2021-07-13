@@ -1,0 +1,11 @@
+{% extends 'base/main.html' %}
+{% block content%}
+
+
+<form method='POST'>
+   <div class="header-bar">
+   <a href="{% url 'tasks'%}">Go Back</a></div>
+<h3> Are you sure ?</h3>
+{% csrf_token%}
+<input type='submit' value='Delete' class="download2">
+</form>{% endblock content %}

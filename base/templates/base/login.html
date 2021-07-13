@@ -1,0 +1,76 @@
+
+<html>
+    <head>
+      <style>
+          
+          .download2 {
+  display: inline-block;
+  margin-right: 10px;
+  background: #339DFF;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 38px;
+  border-radius: 50px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 170px;
+  text-align: center;
+}           
+input[type=text],input[type='password']{
+    width:60%;
+    border:2px solid #aaa;
+    border-radius:4px;
+    margin:8px 0px 0px 8px;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+    background-color: #FAFAFA;
+  }
+  
+  input[type=text]:focus,input[type='password']:focus{
+    border-color:dodgerBlue;
+    box-shadow:0 0 2px 0 dodgerBlue;
+  }
+  label{
+      display: block;
+  }
+  input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    color: black;
+}
+input:-webkit-autofill
+{
+ -webkit-text-fill-color: black !important;
+ color: black;
+}
+      </style>
+
+
+
+    </head>
+
+<body>
+
+    {% extends 'base/main.html' %}
+    {% block content%}
+    <div class="header-bar">     
+        <h1 style="align-items: center;">Login</h1>
+    </div>
+
+ <div class="forms" style="margin-top:50px; align-items: center; " >
+<form method="POST" action=''>
+    {%csrf_token%}
+   
+{{form.as_p}}
+    <button type='submit' value='Login' class="download2" style='margin-left:10px'>Login</button>
+</form>
+
+<a href="{% url 'register'%}">Register</a></p></div></div>
+</body>
+</html>
+{% endblock content %}
