@@ -12,6 +12,5 @@ urlpatterns = [
     path('task-update/<int:pk>/',TaskUpdate.as_view(), name='task-update'),
     path('task-delete/<int:pk>/',TaskDelete.as_view(), name='task-delete'),  
 
-        url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),   
+         
 ]
